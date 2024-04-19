@@ -7,6 +7,9 @@
 - clean: ['~']
 
 - link:
+    # atuin
+    ~/.config/atuin: atuin
+
     # direnv
     ~/.config/direnv: direnv
 
