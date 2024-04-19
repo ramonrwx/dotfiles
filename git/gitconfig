@@ -1,0 +1,44 @@
+[user]
+  name = Ramon Rodrigues
+  email = ramonrwx@gmail.com
+[core]
+  editor = nvim
+[alias]
+  ignore = "!~/.dotfiles/scripts/git-ignore $1"
+[color]
+  ui = true
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+[color "branch"]
+  current = white
+  remote = blue
+[color "diff"]
+  meta = yellow
+  old = red
+  new = green
+[pull]
+  ff = only
+[commit]
+  verbose = true
+[init]
+  defaultBranch = main
+[url "git@github.com:"]
+  insteadOf = gh:
+[url "git@git.sr.ht:"]
+  insteadOf = srht:
+[gpg]
+  program = gpg
+[sendemail]
+  smtpserver = smtp.gmail.com
+  smtpuser = ramonrwx@gmail.com
+  smtpencryption = tls
+  smtpserverport = 587
+  annotate = yes
+  confirm = auto
+[format]
+  signOff = yes
+
+# vim: set filetype=gitconfig
+# vim: ts=2 sts=2 sw=2 et
