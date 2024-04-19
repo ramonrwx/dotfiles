@@ -7,12 +7,12 @@ my dotfiles for termux app
 ### required packages
 
 ```
-pkg install -y aerc atuin binutils build-essential curl
-    direnv fd git gnupg golang
+pkg install -y aerc atuin binutils build-essential curl \
+    direnv fd git gnupg golang \
     gum iconv jq luarocks lazygit \
-    lsd neovim nodejs openssh openssl
-    openssl-tool python ripgrep ruby rust \
-    sqlite stylua zsh
+    lsd neovim man nodejs openssh \
+    openssl openssl-tool python ripgrep ruby \
+    rust sqlite stylua zsh
 ```
 
 ### oh-my-zsh
@@ -46,4 +46,17 @@ git clone --recurse-submodules https://git.sr.ht/~ramonrw/dotfiles ~/.dotfiles
 ```
 cd ~/.dotfiles
 ./install
+```
+
+### install better-sqlite3
+
+```
+mkdir ~/.gyp
+cat << EOF > ~/.gyp/include.gypi
+{
+	'variables': {
+		'android_ndk_path': ''
+	}
+}
+EOF
 ```
