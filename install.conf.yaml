@@ -27,6 +27,9 @@
     # lsd
     ~/.config/lsd/config.yaml: lsd/config.yaml
 
+    # neovim
+    ~/.config/nvim: nvim
+
     # termux
     ~/.termux/colors.properties: termux/colors.properties
     ~/.termux/quotes.txt: termux/quotes.txt
