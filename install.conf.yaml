@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    # termux
+    ~/.termux/colors.properties: termux/colors.properties
+    ~/.termux/quotes.txt: termux/quotes.txt
+    ~/.termux/motd.sh: termux/motd.sh
