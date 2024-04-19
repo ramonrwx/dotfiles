@@ -13,6 +13,9 @@
     # direnv
     ~/.config/direnv: direnv
 
+    # lazygit
+    ~/.config/lazygit/config.yml: lazygit/config.yml
+
     # lsd
     ~/.config/lsd/config.yaml: lsd/config.yaml
 
