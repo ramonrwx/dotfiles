@@ -11,3 +11,6 @@
     ~/.termux/colors.properties: termux/colors.properties
     ~/.termux/quotes.txt: termux/quotes.txt
     ~/.termux/motd.sh: termux/motd.sh
+
+    # tmux
+    ~/.tmux.conf: tmux/tmux.conf
