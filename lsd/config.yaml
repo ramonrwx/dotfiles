@@ -7,7 +7,7 @@ blocks:
 color:
   when: auto
   theme: default
-date: '+%d/%m/%y %H:%M'
+date: "+%d/%m/%y %H:%M"
 dereference: true
 icons:
   when: auto
