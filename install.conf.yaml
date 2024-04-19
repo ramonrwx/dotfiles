@@ -7,6 +7,9 @@
 - clean: ['~']
 
 - link:
+    # direnv
+    ~/.config/direnv: direnv
+
     # lsd
     ~/.config/lsd/config.yaml: lsd/config.yaml
 
