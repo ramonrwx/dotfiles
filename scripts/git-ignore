@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+main() {
+  if [ $# -ne 1 ]; then
+    echo "Usage: $0 <lang>"
+    return 1
+  fi
+
+  lang="${1^}"
+  url="https://raw.githubusercontent.com/github/gitignore/main/${lang}.gitignore"
+
+  response=$(curl -sS "$url")
+
+  if [ $? -ne 0 ]; then
+    echo "Error: .gitignore was not found for $lang" >&2
+    return 1
+  fi
+
+  echo "$response" >>.gitignore
+  echo ".gitignore for $lang added."
+  return 0
+}
+
+main "$@"
