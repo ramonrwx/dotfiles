@@ -1,0 +1,35 @@
+classic: false
+blocks:
+  - permission
+  - size
+  - date
+  - name
+color:
+  when: auto
+  theme: default
+date: '+%d/%m/%y %H:%M'
+dereference: true
+icons:
+  when: auto
+  theme: fancy
+  separator: " "
+indicators: false
+layout: grid
+recursion:
+  enabled: false
+size: short
+# permission: octal
+ignore-globs:
+  - .git
+  - node_modules
+  - venv
+  - __pycache__
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: first
+no-symlink: false
+total-size: false
+hyperlink: auto
+symlink-arrow: ⇒
+header: false
