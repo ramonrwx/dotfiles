@@ -1,0 +1,53 @@
+# Zsh settings
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="vi"
+export BROWSER=termux-open-url
+
+export GPG_TTY=$TTY
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+export GOPATH=$HOME/.go
+export PATH="$HOME/.dotfiles/scripts:$GOPATH/bin:$HOME/.local/bin:$PATH"
+
+export PIP_DISABLE_PIP_VERSION_CHECK=1
+export VIRTUALENV_NO_PERIODIC_UPDATE=1
+
+ZSH_THEME="lambda-gitster"
+
+plugins=(
+  cp colored-man-pages command-not-found
+  git jsontools z
+)
+
+precmd() {
+  if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && command -v pre-commit >& /dev/null; then
+    pre-commit install --hook-type pre-commit
+  fi
+}
+
+source $ZSH/oh-my-zsh.sh
+
+# User settings
+
+# aliases
+alias cp="nocorrect cp -v"
+alias mv="nocorrect mv -v"
+alias mkdir="nocorrect mkdir"
+alias rm="rm -I"
+
+alias ls="lsd"
+alias la="ls -a"
+alias lg="lazygit"
+alias ll="ls -l"
+alias lla="ls -la"
+alias tree="ls --tree --icon never"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# atuin
+eval "$(atuin init zsh --disable-up-arrow)"
+eval "$(all-repos-complete --zsh)"
+
+autoload -U bashcompinit
+bashcompinit

@@ -20,3 +20,7 @@
 
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
+
+    # zsh/oh-my-zsh
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom/themes/lambda-gitster.zsh-theme: zsh/themes/lambda-gitster.zsh-theme
