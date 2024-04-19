@@ -13,6 +13,10 @@
     # direnv
     ~/.config/direnv: direnv
 
+    # gpg
+    ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
+    ~/.gnupg/gpg.conf: gpg/gpg.conf
+
     # lazygit
     ~/.config/lazygit/config.yml: lazygit/config.yml
 
