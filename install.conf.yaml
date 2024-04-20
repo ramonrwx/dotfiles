@@ -33,6 +33,9 @@
     # neovim
     ~/.config/nvim: nvim
 
+    # ssh
+    ~/.ssh/config: ssh/config
+
     # termux
     ~/.termux/colors.properties: termux/colors.properties
     ~/.termux/quotes.txt: termux/quotes.txt
