@@ -1,0 +1,10 @@
+Host *
+    AddKeysToAgent yes
+
+Host github.com
+    User git
+    IdentityFile ~/.ssh/
+
+Host git.sr.ht
+    User git
+    IdentityFile ~/.ssh/
