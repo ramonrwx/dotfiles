@@ -20,6 +20,8 @@
   new = green
 [pull]
   ff = only
+[push]
+  autoSetupRemote = true
 [commit]
   verbose = true
 [init]
