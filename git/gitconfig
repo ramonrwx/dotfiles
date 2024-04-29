@@ -38,6 +38,7 @@
   smtpencryption = tls
   smtpserverport = 587
   annotate = yes
+  assume8bitEncoding = UTF-8
   confirm = auto
 [format]
   signOff = yes
