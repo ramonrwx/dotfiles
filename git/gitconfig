@@ -1,5 +1,5 @@
 [user]
-  name = Ramon Rodrigues
+  name  = Ramon Rodrigues
   email = ramonrwx@gmail.com
 [core]
   editor = nvim
@@ -8,16 +8,16 @@
 [color]
   ui = true
 [color "status"]
-  added = green
-  changed = yellow
+  added     = green
+  changed   = yellow
   untracked = red
 [color "branch"]
   current = white
-  remote = blue
+  remote  = blue
 [color "diff"]
   meta = yellow
-  old = red
-  new = green
+  old  = red
+  new  = green
 [pull]
   ff = only
 [push]
@@ -33,13 +33,15 @@
 [gpg]
   program = gpg
 [sendemail]
-  smtpserver = smtp.gmail.com
-  smtpuser = ramonrwx@gmail.com
-  smtpencryption = tls
-  smtpserverport = 587
-  annotate = yes
-  assume8bitEncoding = UTF-8
-  confirm = auto
+  smtpserver        = smtp.gmail.com
+  smtpuser          = ramonrwx@gmail.com
+  smtpencryption    = tls
+  smtpserverport    = 587
+  annotate          = yes
+  assume8bitEncoing = UTF-8
+  confirm           = auto
+[credential "smtp://ramonrwx%40gmail.com@smtp.gmail.com%3a587"]
+  helper = "!f() { test \"$1\" = get && echo \"password=$(pass show aerc/work | head -n1)\"; }; f"
 [format]
   signOff = yes
 
