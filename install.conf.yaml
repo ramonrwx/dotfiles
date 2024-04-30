@@ -25,6 +25,9 @@
     ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
     ~/.gnupg/gpg.conf: gpg/gpg.conf
 
+    # isync/mbsync
+    ~/.mbsyncrc: isync/mbsyncrc
+
     # lazygit
     ~/.config/lazygit/config.yml: lazygit/config.yml
 

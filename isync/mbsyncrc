@@ -1,0 +1,31 @@
+Create        Both
+Expunge       Both
+SyncState     *
+
+IMAPAccount   gmail
+Host          imap.gmail.com
+User          ramonrwx@gmail.com
+PassCmd       "pass show aerc/work | head -n1"
+SSLType       IMAPS
+Timeout       60
+Pipelinedepth 1
+
+IMAPStore     gmail-remote
+Account       gmail
+
+MaildirStore  gmail-local
+Path          ~/mail/gmail/
+Inbox         ~/mail/gmail/Inbox
+SubFolders    Verbatim
+
+Channel       gmail-inbox
+Far           :gmail-remote:INBOX
+Near          :gmail-local:Inbox
+
+Channel       gmail-sourcehut
+Far           :gmail-remote:SourceHut
+Near          :gmail-local:SourceHut
+
+Group         gmail
+Channel       gmail-inbox
+Channel       gmail-sourcehut
