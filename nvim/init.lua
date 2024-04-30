@@ -119,6 +119,7 @@ require('lazy').setup {
       require('mini.pairs').setup { silent = true }
       require('mini.completion').setup()
       require('mini.files').setup()
+      require('mini.align').setup()
       require('mini.comment').setup {
         options = {
           ignore_blank_line = true,
