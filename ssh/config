@@ -3,8 +3,8 @@ Host *
 
 Host github.com
     User git
-    IdentityFile ~/.ssh/
+    IdentityFile ~/.ssh/github
 
 Host git.sr.ht
     User git
-    IdentityFile ~/.ssh/
+    IdentityFile ~/.ssh/sourcehut
