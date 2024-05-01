@@ -66,8 +66,8 @@
 [credential "smtp://ramonrwx%40gmail.com@smtp.gmail.com%3a587"]
   helper = "!f() { test \"$1\" = get && echo \"password=$(pass show aerc/work | head -n1)\"; }; f"
 [format]
-  signOff = yes
-  notes   = true
+  ; signOff = yes
+  notes     = true
 [notes]
   rewriteRef  = refs/notes/*
   rewriteMode = concatenate
