@@ -2,30 +2,50 @@ Create        Both
 Expunge       Both
 SyncState     *
 
-IMAPAccount   gmail
-Host          imap.gmail.com
-User          ramonrwx@gmail.com
-PassCmd       "pass show aerc/work | head -n1"
+IMAPAccount   umbler
+Host          imap.umbler.com
+User          ramon@rwxcorp.net
+PassCmd       "pass show email/umbler | head -n1"
 SSLType       IMAPS
 Timeout       60
 Pipelinedepth 1
 
-IMAPStore     gmail-remote
-Account       gmail
+IMAPStore     umbler-remote
+Account       umbler
 
-MaildirStore  gmail-local
-Path          ~/mail/gmail/
-Inbox         ~/mail/gmail/Inbox
+MaildirStore  umbler-local
+Path          ~/mail/
+Inbox         ~/mail/Inbox
 SubFolders    Verbatim
 
-Channel       gmail-inbox
-Far           :gmail-remote:INBOX
-Near          :gmail-local:Inbox
+Channel       umbler-inbox
+Far           :umbler-remote:INBOX
+Near          :umbler-local:Inbox
 
-Channel       gmail-sourcehut
-Far           :gmail-remote:SourceHut
-Near          :gmail-local:SourceHut
+Channel       umbler-deleted
+Far           :umbler-remote:"Deleted Items"
+Near          :umbler-local:Deleted
 
-Group         gmail
-Channel       gmail-inbox
-Channel       gmail-sourcehut
+Channel       umbler-drafts
+Far           :umbler-remote:Drafts
+Near          :umbler-local:Drafts
+
+Channel       umbler-spam
+Far           :umbler-remote:"Junk E-Mail"
+Near          :umbler-local:Spam
+
+Channel       umbler-sent
+Far           :umbler-remote:"Sent Items"
+Near          :umbler-local:Sent
+
+Channel       umbler-archives
+Far           :umbler-remote:Archives
+Near          :umbler-local:Archives
+
+Group         umbler
+Channel       umbler-inbox
+Channel       umbler-deleted
+Channel       umbler-drafts
+Channel       umbler-spam
+Channel       umbler-sent
+Channel       umbler-archives
