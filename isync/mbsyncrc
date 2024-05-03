@@ -38,9 +38,9 @@ Channel       umbler-sent
 Far           :umbler-remote:"Sent Items"
 Near          :umbler-local:Sent
 
-Channel       umbler-archives
-Far           :umbler-remote:Archives
-Near          :umbler-local:Archives
+Channel       umbler-archive
+Far           :umbler-remote:Archive
+Near          :umbler-local:Archive
 
 Group         umbler
 Channel       umbler-inbox
@@ -48,4 +48,4 @@ Channel       umbler-deleted
 Channel       umbler-drafts
 Channel       umbler-spam
 Channel       umbler-sent
-Channel       umbler-archives
+Channel       umbler-archive
