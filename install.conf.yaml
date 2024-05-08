@@ -11,6 +11,7 @@
     ~/.config/aerc/aerc.conf: aerc/aerc.conf
     ~/.config/aerc/accounts.conf: aerc/accounts.conf
     ~/.config/aerc/binds.conf: aerc/binds.conf
+    ~/.config/aerc/filters: aerc/filters
 
     # atuin
     ~/.config/atuin: atuin
