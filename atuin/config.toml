@@ -1,13 +1,19 @@
 ## enable or disable automatic sync
-auto_sync = true
+auto_sync      = true
 
 ## which search mode to use
-search_mode = "fuzzy"
+search_mode    = "fuzzy"
 
 ## which filter mode to use
-filter_mode = "directory"
+filter_mode    = "directory"
 
 ## which style to use
-style = "compact"
+style          = "compact"
 
-workspaces = true
+## automatically activated when you are in a git repository
+workspaces     = true
+
+## exclude commands from history tracking
+history_filter = [
+   "^curl"
+]
