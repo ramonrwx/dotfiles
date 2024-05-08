@@ -10,9 +10,10 @@ my dotfiles for termux app
 pkg install -y aerc atuin binutils build-essential curl \
     direnv fd git gnupg golang \
     gum hut iconv isync jq \
-    luarocks lazygit lsd neovim man \
+    luarocks lazygit lsd man neovim \
     nodejs openssh openssl openssl-tool python \
-    pass ripgrep ruby rust sqlite stylua zsh
+    pass ripgrep ruby rust sqlite \
+    stylua ugrep w3m zsh
 ```
 
 ### oh-my-zsh
@@ -29,6 +30,12 @@ python -m pip install --user \
     pre-commit \
     requests \
     virtualenv
+```
+
+### required go packages
+
+```
+go install github.com/ferdinandyb/maildir-rank-addr@latest
 ```
 
 ### lua packages
