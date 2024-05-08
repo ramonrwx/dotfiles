@@ -4,23 +4,24 @@
 [core]
   editor = nvim
 [alias]
-  s      = status --short --branch
-  ri     = rebase -i
-  ra     = rebase --abort
-  rc     = rebase --continue
-  rp     = reset -p HEAD^
-  ci     = commit -s
+  a      = add -u
+  c      = commit
   ca     = commit --amend
   can    = commit --amend --no-edit
+  ci     = commit -s
   co     = checkout
-  a      = add -u
+  fixup  = commit --fixup
+  ignore = "!~/.dotfiles/scripts/git-ignore $1"
   l      = log --oneline
+  lfixes = log --pretty=fixes
   ll     = log --pretty=line --date=short
   lll    = log --pretty=lineauthor --date=short
-  lfixes = log --pretty=fixes
-  fixup  = commit --fixup
+  ra     = rebase --abort
+  rc     = rebase --continue
+  ri     = rebase -i
+  rp     = reset -p HEAD^
+  s      = status --short --branch
   wip    = commit -asm 'wip'
-  ignore = "!~/.dotfiles/scripts/git-ignore $1"
 [color]
   ui = true
 [pretty]
