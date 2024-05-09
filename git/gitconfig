@@ -59,7 +59,7 @@
   smtpuser          = ramon@rwxcorp.net
   smtpencryption    = tls
   smtpserverport    = 587
-  ; suppressCc        = self
+  suppressCc        = self
   chainreplayto     = false
   annotate          = yes
   assume8bitEncoing = UTF-8
