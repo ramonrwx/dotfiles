@@ -88,20 +88,26 @@ require('lazy').setup {
     },
   },
   {
-    'zootedb0t/citruszest.nvim',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     lazy = false,
     priority = 1000,
     config = function()
-      require('citruszest').setup {
-        option = {
-          italic = false,
+      require('catppuccin').setup {
+        no_italic = true, -- Force no italic
+        no_bold = true, -- Force no bold
+        no_underline = true,
+        integrations = {
+          gitsigns = true,
+          treesitter = true,
+          notify = false,
+          mini = {
+            enabled = true,
+            indentscope_color = '',
+          },
         },
       }
-
-      vim.cmd.colorscheme 'citruszest'
-      -- vim.cmd.hi 'Comment gui=none'
-      -- vim.cmd.hi 'Keyword gui=none'
-      -- vim.cmd.hi 'Identifier gui=none'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
   {
