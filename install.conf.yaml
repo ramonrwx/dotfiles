@@ -13,6 +13,7 @@
     ~/.config/aerc/binds.conf: aerc/binds.conf
     ~/.config/aerc/filters: aerc/filters
     ~/.config/aerc/stylesets: aerc/stylesets
+    ~/.config/aerc/templates: aerc/templates
 
     # atuin
     ~/.config/atuin: atuin
