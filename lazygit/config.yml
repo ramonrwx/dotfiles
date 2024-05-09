@@ -1,24 +1,27 @@
 gui:
-  theme:
-    activeBorderColor:
-      - "#00FFFF"
-      - bold
-    inactiveBorderColor:
-      - "#767C77"
-    optionsTextColor:
-      - "#FF7431"
-    selectedLineBgColor:
-      - "#404040"
-    cherryPickedCommitBgColor:
-      - "#383838"
-    cherryPickedCommitFgColor:
-      - "#FFAA54"
-    unstagedChangesColor:
-      - "#FF1A75"
-    defaultFgColor:
-      - "#BFBFBF"
-    searchingActiveBorderColor:
-      - "#FFFF00"
+ # Use the mocha catppuccin theme
+ theme:
+   activeBorderColor:
+     - '#89b4fa'
+     - bold
+   inactiveBorderColor:
+     - '#a6adc8'
+   optionsTextColor:
+     - '#89b4fa'
+   selectedLineBgColor:
+     - '#313244'
+   selectedRangeBgColor:
+     - '#313244'
+   cherryPickedCommitBgColor:
+     - '#45475a'
+   cherryPickedCommitFgColor:
+     - '#89b4fa'
+   unstagedChangesColor:
+     - '#f38ba8'
+   defaultFgColor:
+     - '#cdd6f4'
+   searchingActiveBorderColor:
+     - '#f9e2af'
 git:
   paging:
     colorArg: always
