@@ -4,6 +4,7 @@ vim.g.maplocalleader = ' '
 vim.opt.number = false
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
+vim.opt.swapfile = false
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
