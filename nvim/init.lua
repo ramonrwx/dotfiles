@@ -2,6 +2,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.opt.number = false
+vim.opt.termguicolors = true
+vim.opt.background = 'dark'
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
 vim.opt.swapfile = false
@@ -14,6 +16,7 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 
 vim.opt.signcolumn = 'yes'
+vim.opt.colorcolumn = '80'
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.hidden = true
@@ -30,25 +33,67 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>h', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<leader>l', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<leader>j', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<leader>k', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>h', '<C-w><C-h>', {
+  desc = 'Move focus to the left window',
+})
+vim.keymap.set('n', '<leader>l', '<C-w><C-l>', {
+  desc = 'Move focus to the right window',
+})
+vim.keymap.set('n', '<leader>j', '<C-w><C-j>', {
+  desc = 'Move focus to the lower window',
+})
+vim.keymap.set('n', '<leader>k', '<C-w><C-k>', {
+  desc = 'Move focus to the upper window',
+})
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line down', noremap = true, silent = true })
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line up', noremap = true, silent = true })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", {
+  desc = 'Move line down',
+  noremap = true,
+  silent = true,
+})
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", {
+  desc = 'Move line up',
+  noremap = true,
+  silent = true,
+})
 
-vim.keymap.set('n', 'gt', ':bnext<CR>', { desc = 'Go to next buffer', noremap = true, silent = true })
-vim.keymap.set('n', 'gT', ':bprevious<CR>', { desc = 'Go to previous buffer', noremap = true, silent = true })
+vim.keymap.set('n', 'gt', ':bnext<CR>', {
+  desc = 'Go to next buffer',
+  noremap = true,
+  silent = true,
+})
+vim.keymap.set('n', 'gT', ':bprevious<CR>', {
+  desc = 'Go to previous buffer',
+  noremap = true,
+  silent = true,
+})
 
-vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Fast saving', noremap = true, silent = true })
-vim.keymap.set('n', '<leader>q', ':qa!<CR>', { desc = 'Close all windows and exit', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>w', ':w<CR>', {
+  desc = 'Fast saving',
+  noremap = true,
+  silent = true,
+})
+vim.keymap.set('n', '<leader>q', ':qa!<CR>', {
+  desc = 'Close all windows and exit',
+  noremap = true,
+  silent = true,
+})
 
-vim.keymap.set('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
-vim.keymap.set('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
+vim.keymap.set('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], {
+  expr = true,
+})
+vim.keymap.set('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], {
+  expr = true,
+})
 
-vim.keymap.set('n', '<c-n>', ':lua MiniFiles.open()<CR>', { desc = 'Navigate and manipulate file system' })
-vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'Open LazyGit' })
+vim.keymap.set('n', '<c-n>', ':lua MiniFiles.open()<CR>', {
+  desc = 'Navigate and manipulate file system',
+  noremap = true,
+  silent = true,
+})
+vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', {
+  desc = 'Open LazyGit',
+})
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -89,26 +134,24 @@ require('lazy').setup {
     },
   },
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'ellisonleao/gruvbox.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      require('catppuccin').setup {
-        no_italic = true, -- Force no italic
-        no_bold = true, -- Force no bold
-        no_underline = true,
-        integrations = {
-          gitsigns = true,
-          treesitter = true,
-          notify = false,
-          mini = {
-            enabled = true,
-            indentscope_color = '',
-          },
+      require('gruvbox').setup {
+        terminal_colors = true,
+        italic = {
+          strings = false,
+          emphasis = false,
+          comments = false,
+          operators = false,
+          folds = false,
+        },
+        overrides = {
+          SignColumn = { bg = '#282828' },
         },
       }
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd 'colorscheme gruvbox'
     end,
   },
   {
