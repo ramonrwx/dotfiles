@@ -1,3 +1,5 @@
+# vim: ft=dosini
+
 *.default=true
 *.normal=true
 *.selected.bold=true
