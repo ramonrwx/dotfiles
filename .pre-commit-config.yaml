@@ -1,7 +1,6 @@
 ci:
   skip: [stylua, luacheck]
 
-files: ^nvim/
 exclude: ^nvim/lazy-lock.json
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -10,6 +9,7 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+      - id: check-toml
   - repo: https://github.com/rwxcorp/pre-commit-lua.git
     rev: v1.0.0
     hooks:
