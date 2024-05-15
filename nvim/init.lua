@@ -194,7 +194,7 @@ require('lazy').setup {
         formatters_by_ft = {
           lua = { 'stylua' },
           go = { 'goimports' },
-          sh = { 'shfmt' },
+          sh = { 'shfmt', 'shellcheck' },
         },
       }
     end,

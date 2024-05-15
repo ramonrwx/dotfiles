@@ -18,6 +18,10 @@
     # atuin
     ~/.config/atuin: atuin
 
+    # bin
+    ~/.local/bin/addresslookup: bin/addresslookup
+    ~/.local/bin/git-ignore: bin/git-ignore
+
     # direnv
     ~/.config/direnv: direnv
 

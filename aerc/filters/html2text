@@ -1,22 +1,22 @@
 #!/bin/sh
 
 exec w3m \
-	-I UTF-8 \
-	-T text/html \
-	-cols 100 \
-	-dump \
-	-graph \
-	-o display_image=false \
-	-o display_link_number=true \
-	-o auto_image=false \
-	-o decode_url=true \
-	-o disable_center=true \
-	-o fold_textarea=true \
-	-o fold_line=true \
-	-o use_proxy=true \
-	-o http_proxy='127.0.0.1:9' \
-	-o https_proxy='127.0.0.1:9' \
-	-o gopher_proxy='127.0.0.1:9' \
-	-o ftp_proxy='127.0.0.1:9' \
-	-o no_cache=true \
-	-o use_cookie=false
+    -I UTF-8 \
+    -T text/html \
+    -cols 100 \
+    -dump \
+    -graph \
+    -o display_image=false \
+    -o display_link_number=true \
+    -o auto_image=false \
+    -o decode_url=true \
+    -o disable_center=true \
+    -o fold_textarea=true \
+    -o fold_line=true \
+    -o use_proxy=true \
+    -o http_proxy='127.0.0.1:9' \
+    -o https_proxy='127.0.0.1:9' \
+    -o gopher_proxy='127.0.0.1:9' \
+    -o ftp_proxy='127.0.0.1:9' \
+    -o no_cache=true \
+    -o use_cookie=false
