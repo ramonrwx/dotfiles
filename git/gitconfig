@@ -11,7 +11,7 @@
   ci     = commit -s
   co     = checkout
   fixup  = commit --fixup
-  ignore = "!~/.dotfiles/scripts/git-ignore $1"
+  ignore = "!git-ignore $1"
   l      = log --oneline
   lfixes = log --pretty=fixes
   ll     = log --pretty=line --date=short

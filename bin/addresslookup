@@ -3,7 +3,7 @@
 FILE=~/.cache/maildir-rank-addr/addressbook.tsv
 
 if [ -f "$FILE" ]; then
-    ugrep -jP -m 100 --color=never $1 $FILE
+    ugrep -jP -m 100 --color=never "$1" $FILE
 else
     echo -e "addressbook@missing\tplease run maildir-rank-addr"
 fi

@@ -13,7 +13,8 @@ pkg install -y aerc atuin binutils build-essential curl \
     luarocks lazygit lsd man neovim \
     nodejs openssh openssl openssl-tool python \
     pass ripgrep ruby rust sqlite \
-    stylua ugrep w3m zsh
+    shfmt shellcheck stylua ugrep w3m \
+    zsh
 ```
 
 ### oh-my-zsh
