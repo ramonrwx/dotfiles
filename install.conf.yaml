@@ -21,6 +21,9 @@
     # direnv
     ~/.config/direnv: direnv
 
+    # editorconfig
+    ~/.editorconfig: .editorconfig
+
     # gitconfig
     ~/.gitconfig: git/gitconfig
 
