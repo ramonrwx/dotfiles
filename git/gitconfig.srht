@@ -1,0 +1,26 @@
+[sendemail]
+  smtpserver        = smtp.umbler.com
+  smtpuser          = ramon@rwxcorp.net
+  smtpencryption    = tls
+  smtpserverport    = 587
+  ; suppressCc        = self
+  chainreplayto     = false
+  annotate          = yes
+  assume8bitEncoing = UTF-8
+  confirm           = auto
+[credential "smtp://ramon%40rwxcorp.net@smtp.umbler.com%3a587"]
+  helper = "!f() { test \"$1\" = get && echo \"password=$(pass show email/umbler | head -n1)\"; }; f"
+[format]
+  signoff = true
+  notes   = true
+[remote "origin"]
+  fetch = +refs/notes/*:refs/notes/*
+[notes]
+  rewriteRef  = refs/notes/*
+  rewriteMode = concatenate
+  displayRef  = refs/notes/*
+[rerere]
+  enabled = true
+
+# vim: set filetype=gitconfig
+# vim: ts=2 sts=2 sw=2 et
