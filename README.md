@@ -10,11 +10,11 @@ my dotfiles for termux app
 pkg install -y aerc atuin binutils build-essential curl \
     direnv fd git gnupg golang \
     gum hut iconv isync jq \
-    luarocks lazygit lsd man neovim \
-    nodejs openssh openssl openssl-tool python \
-    pass ripgrep ruby rust sqlite \
-    shfmt shellcheck stylua ugrep w3m \
-    zsh
+    luarocks lazygit lsd neovim nodejs \
+    man msmtp openssh openssl openssl-tool \
+    python pass ripgrep ruby rust \
+    sqlite shfmt shellcheck stylua ugrep \
+    w3m zsh
 ```
 
 ### oh-my-zsh
