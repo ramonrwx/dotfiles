@@ -1,15 +1,9 @@
 [sendemail]
-  smtpserver        = smtp.umbler.com
-  smtpuser          = ramon@rwxcorp.net
-  smtpencryption    = tls
-  smtpserverport    = 587
-  ; suppressCc        = self
+  sendmailCmd      = /data/data/com.termux/files/usr/bin/msmtp
   chainreplayto     = false
   annotate          = yes
   assume8bitEncoing = UTF-8
   confirm           = auto
-[credential "smtp://ramon%40rwxcorp.net@smtp.umbler.com%3a587"]
-  helper = "!f() { test \"$1\" = get && echo \"password=$(pass show email/umbler | head -n1)\"; }; f"
 [format]
   signoff = true
   notes   = true
