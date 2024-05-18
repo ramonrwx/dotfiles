@@ -1,9 +1,10 @@
 [sendemail]
-  sendmailCmd      = /data/data/com.termux/files/usr/bin/msmtp
-  chainreplayto     = false
   annotate          = yes
   assume8bitEncoing = UTF-8
+  chainreplayto     = false
   confirm           = auto
+  envelopesender    = auto
+  sendmailCmd       = /usr/bin/msmtp
 [format]
   signoff = true
   notes   = true
