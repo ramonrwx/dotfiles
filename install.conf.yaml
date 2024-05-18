@@ -48,6 +48,9 @@
     # neovim
     ~/.config/nvim: nvim
 
+    # msmtp
+    ~/.msmtprc: msmtp/msmtprc
+
     # ssh
     ~/.ssh/config: ssh/config
 
