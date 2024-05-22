@@ -6,6 +6,9 @@
 
 - clean: ["~"]
 
+- shell:
+  - go build -o ./bin/prompt ./bin/prompt.go
+
 - link:
     # aerc
     ~/.config/aerc/aerc.conf: aerc/aerc.conf
@@ -21,6 +24,7 @@
     # bin
     ~/.local/bin/addresslookup: bin/addresslookup
     ~/.local/bin/git-ignore: bin/git-ignore
+    ~/.local/bin/prompt: bin/prompt
 
     # direnv
     ~/.config/direnv: direnv

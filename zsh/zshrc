@@ -12,7 +12,8 @@ export PATH="$HOME/.npm-global/bin:$GOPATH/bin:$HOME/.local/bin:$PATH"
 export PIP_DISABLE_PIP_VERSION_CHECK=1
 export VIRTUALENV_NO_PERIODIC_UPDATE=1
 
-ZSH_THEME="lambda-gitster"
+# ZSH_THEME="lambda-gitster"
+PS1='$(prompt) \$ '
 
 plugins=(
   cp colored-man-pages command-not-found
