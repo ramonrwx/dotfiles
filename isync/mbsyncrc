@@ -42,6 +42,14 @@ Channel       umbler-archive
 Far           :umbler-remote:Archive
 Near          :umbler-local:Archive
 
+Channel       umbler-github
+Far           :umbler-remote:Github
+Near          :umbler-local:Github
+
+Channel       umbler-sourcehut
+Far           :umbler-remote:SourceHut
+Near          :umbler-local:SourceHut
+
 Group         umbler
 Channel       umbler-inbox
 Channel       umbler-deleted
@@ -49,3 +57,5 @@ Channel       umbler-drafts
 Channel       umbler-spam
 Channel       umbler-sent
 Channel       umbler-archive
+Channel       umbler-github
+Channel       umbler-sourcehut
