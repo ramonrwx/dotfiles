@@ -8,3 +8,7 @@ Host github.com
 Host git.sr.ht
     User git
     IdentityFile ~/.ssh/sourcehut
+
+Host codeberg.org
+    User git
+    IdentityFile ~/.ssh/codeberg
