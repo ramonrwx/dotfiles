@@ -14,7 +14,14 @@ export VIRTUALENV_NO_PERIODIC_UPDATE=1
 
 # ZSH_THEME="lambda-gitster"
 autoload -U colors && colors
-PS1='%F{green}$(prompt) %(?:%F{green}\$:%F{red}\$)%F{reset} '
+
+parse_git_branch() {
+  if [ -n "$(git rev-parse --git-dir 2> /dev/null)" ]; then
+    echo "%F{blue}$(git rev-parse --abbrev-ref HEAD)%F{reset} "
+  fi
+}
+
+PS1='%F{green}$(prompt) $(parse_git_branch)%(?:%F{green}\$:%F{red}\$)%F{reset} '
 
 plugins=(
   cp colored-man-pages command-not-found
