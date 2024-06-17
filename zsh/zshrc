@@ -28,12 +28,22 @@ fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 
-last_status() {
+__last_status() {
     echo " %(?:%F{green}\$:%F{red}\$)%F{reset} "
 }
 
+__virtual_env() {
+    if [ -n "${VIRTUAL_ENV}" ] && [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ]; then
+        if [ "$(basename $VIRTUAL_ENV)" = "__" ]; then
+            echo "[$(basename $(dirname $VIRTUAL_ENV))] "
+        else
+            echo "($(basename $VIRTUAL_ENV)) "
+        fi
+    fi
+}
+
 precmd() {
-    __git_ps1 "%F{green}$(prompt)%F{reset}" "$(last_status)" " (%s)"
+    __git_ps1 "$(__virtual_env)%F{green}$(prompt)%F{reset}" "$(__last_status)" " (%s)"
     if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && command -v pre-commit >&/dev/null; then
         pre-commit install --hook-type pre-commit
     fi
