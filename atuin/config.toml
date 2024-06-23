@@ -1,19 +1,28 @@
-## enable or disable automatic sync
-auto_sync      = true
+auto_sync          = true
+sync_address       = "https://atuin.rwxcorp.net"
+search_mode        = "fuzzy"
+filter_mode        = "directory"
+style              = "compact"
+keymap_mode        = "vim-normal"
 
-## which search mode to use
-search_mode    = "fuzzy"
+workspaces         = true
 
-## which filter mode to use
-filter_mode    = "directory"
-
-## which style to use
-style          = "compact"
-
-## automatically activated when you are in a git repository
-workspaces     = true
-
-## exclude commands from history tracking
-history_filter = [
-   "^curl"
+history_filter     = [
+  "^curl"
 ]
+
+[stats]
+common_subcommands = [
+  "ls",
+  "apt",
+  "git",
+  "go",
+  "npm",
+  "rm",
+  "python",
+  "python3",
+  "tmux"
+]
+
+[sync]
+records            = true
