@@ -12,3 +12,8 @@ Host git.sr.ht
 Host codeberg.org
     User git
     IdentityFile ~/.ssh/codeberg
+
+Host git.rwxcorp.net
+    User git
+    Port 222
+    IdentityFile ~/.ssh/rwxcorp
