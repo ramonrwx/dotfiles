@@ -8,7 +8,8 @@ keymap_mode        = "vim-normal"
 workspaces         = true
 
 history_filter     = [
-  "^curl"
+  "^curl",
+  "^mc"
 ]
 
 [stats]
