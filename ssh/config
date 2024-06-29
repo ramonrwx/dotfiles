@@ -15,5 +15,4 @@ Host codeberg.org
 
 Host git.rwxcorp.net
     User git
-    Port 222
     IdentityFile ~/.ssh/rwxcorp
