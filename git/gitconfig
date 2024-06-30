@@ -54,6 +54,15 @@
   insteadOf = srht:
 [gpg]
   program = gpg
+[sendemail]
+  annotate          = yes
+  assume8bitEncoing = UTF-8
+  chainreplayto     = false
+  confirm           = auto
+  envelopesender    = auto
+  sendmailCmd       = /usr/bin/msmtp
+[rerere]
+  enabled = true
 [includeIf "gitdir:~/sources/"]
   path = ./.gitconfig.srht
 
