@@ -1,18 +1,6 @@
 Host *
     AddKeysToAgent yes
 
-Host github.com
+Host code.rwxcorp.net
     User git
-    IdentityFile ~/.ssh/github
-
-Host git.sr.ht
-    User git
-    IdentityFile ~/.ssh/sourcehut
-
-Host codeberg.org
-    User git
-    IdentityFile ~/.ssh/codeberg
-
-Host git.rwxcorp.net
-    User git
-    IdentityFile ~/.ssh/rwxcorp
+    Port 2222
