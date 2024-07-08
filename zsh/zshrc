@@ -76,3 +76,4 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 autoload -U bashcompinit
 bashcompinit
+PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "/data/data/com.termux/files/home/.config/tea/autocomplete.zsh"
