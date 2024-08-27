@@ -42,6 +42,10 @@ Channel       umbler-archive
 Far           :umbler-remote:Archive
 Near          :umbler-local:Archive
 
+Channel       umbler-contabo
+Far           :umbler-remote:Contabo
+Near          :umbler-local:Contabo
+
 Channel       umbler-github
 Far           :umbler-remote:Github
 Near          :umbler-local:Github
@@ -59,3 +63,4 @@ Channel       umbler-sent
 Channel       umbler-archive
 Channel       umbler-github
 Channel       umbler-sourcehut
+Channel       umbler-contabo
