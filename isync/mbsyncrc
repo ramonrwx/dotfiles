@@ -6,7 +6,7 @@ IMAPAccount   umbler
 Host          imap.umbler.com
 User          ramon@rwxcorp.net
 PassCmd       "pass show email/umbler | head -n1"
-SSLType       IMAPS
+TLSType       IMAPS
 Timeout       60
 Pipelinedepth 1
 
