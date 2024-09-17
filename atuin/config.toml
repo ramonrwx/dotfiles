@@ -2,7 +2,7 @@ auto_sync          = true
 search_mode        = "fuzzy"
 filter_mode        = "directory"
 style              = "compact"
-keymap_mode        = "vim-normal"
+# keymap_mode        = "vim-normal"
 
 workspaces         = true
 
