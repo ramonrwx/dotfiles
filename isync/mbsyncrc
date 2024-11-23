@@ -1,66 +1,67 @@
-Create        Both
-Expunge       Both
-SyncState     *
+Create          Both
+Expunge         Both
+SyncState       *
 
-IMAPAccount   umbler
-Host          imap.umbler.com
-User          ramon@rwxcorp.net
-PassCmd       "pass show email/umbler | head -n1"
-TLSType       IMAPS
-Timeout       60
-Pipelinedepth 1
+IMAPAccount     umbler
+Host            imap.umbler.com
+User            ramon@rwxcorp.net
+PassCmd         "pass show email/umbler | head -n1"
+TLSType         IMAPS
+Timeout         60
+Pipelinedepth   1
+CertificateFile ~/.cert/imap.umbler.com.pem
 
-IMAPStore     umbler-remote
-Account       umbler
+IMAPStore       umbler-remote
+Account         umbler
 
-MaildirStore  umbler-local
-Path          ~/mail/
-Inbox         ~/mail/Inbox
-SubFolders    Verbatim
+MaildirStore    umbler-local
+Path            ~/mail/
+Inbox           ~/mail/Inbox
+SubFolders      Verbatim
 
-Channel       umbler-inbox
-Far           :umbler-remote:INBOX
-Near          :umbler-local:Inbox
+Channel         umbler-inbox
+Far             :umbler-remote:INBOX
+Near            :umbler-local:Inbox
 
-Channel       umbler-deleted
-Far           :umbler-remote:"Deleted Items"
-Near          :umbler-local:Deleted
+Channel         umbler-deleted
+Far             :umbler-remote:"Deleted Items"
+Near            :umbler-local:Deleted
 
-Channel       umbler-drafts
-Far           :umbler-remote:Drafts
-Near          :umbler-local:Drafts
+Channel         umbler-drafts
+Far             :umbler-remote:Drafts
+Near            :umbler-local:Drafts
 
-Channel       umbler-spam
-Far           :umbler-remote:"Junk E-Mail"
-Near          :umbler-local:Spam
+Channel         umbler-spam
+Far             :umbler-remote:"Junk    E-Mail"
+Near            :umbler-local:Spam
 
-Channel       umbler-sent
-Far           :umbler-remote:"Sent Items"
-Near          :umbler-local:Sent
+Channel         umbler-sent
+Far             :umbler-remote:"Sent    Items"
+Near            :umbler-local:Sent
 
-Channel       umbler-archive
-Far           :umbler-remote:Archive
-Near          :umbler-local:Archive
+Channel         umbler-archive
+Far             :umbler-remote:Archive
+Near            :umbler-local:Archive
 
-Channel       umbler-contabo
-Far           :umbler-remote:Contabo
-Near          :umbler-local:Contabo
+Channel         umbler-contabo
+Far             :umbler-remote:Contabo
+Near            :umbler-local:Contabo
 
-Channel       umbler-github
-Far           :umbler-remote:Github
-Near          :umbler-local:Github
+Channel         umbler-github
+Far             :umbler-remote:Github
+Near            :umbler-local:Github
 
-Channel       umbler-sourcehut
-Far           :umbler-remote:SourceHut
-Near          :umbler-local:SourceHut
+Channel         umbler-sourcehut
+Far             :umbler-remote:SourceHut
+Near            :umbler-local:SourceHut
 
-Group         umbler
-Channel       umbler-inbox
-Channel       umbler-deleted
-Channel       umbler-drafts
-Channel       umbler-spam
-Channel       umbler-sent
-Channel       umbler-archive
-Channel       umbler-github
-Channel       umbler-sourcehut
-Channel       umbler-contabo
+Group           umbler
+Channel         umbler-inbox
+Channel         umbler-deleted
+Channel         umbler-drafts
+Channel         umbler-spam
+Channel         umbler-sent
+Channel         umbler-archive
+Channel         umbler-github
+Channel         umbler-sourcehut
+Channel         umbler-contabo
