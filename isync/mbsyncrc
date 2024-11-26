@@ -32,11 +32,11 @@ Far             :umbler-remote:Drafts
 Near            :umbler-local:Drafts
 
 Channel         umbler-spam
-Far             :umbler-remote:"Junk    E-Mail"
+Far             :umbler-remote:"Junk E-Mail"
 Near            :umbler-local:Spam
 
 Channel         umbler-sent
-Far             :umbler-remote:"Sent    Items"
+Far             :umbler-remote:"Sent Items"
 Near            :umbler-local:Sent
 
 Channel         umbler-archive
