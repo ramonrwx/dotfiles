@@ -4,13 +4,13 @@ ci:
 exclude: ^nvim/lazy-lock.json
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-toml
-  - repo: https://code.rwxcorp.net/rwxcorp/pre-commit-lua.git
+  - repo: https://codeberg.org/ramonrw/pre-commit-lua.git
     rev: v1.0.0
     hooks:
       - id: stylua
