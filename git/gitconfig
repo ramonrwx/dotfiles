@@ -1,6 +1,7 @@
 [user]
   name  = Ramon Rodrigues
   email = ramon@rwxcorp.net
+  signingkey = ramon@rwxcorp.net
 [core]
   editor = nvim
 [alias]
@@ -45,6 +46,7 @@
   autoSetupRemote = true
   followTags = yes
 [commit]
+  gpgSign = true
   verbose = true
 [init]
   defaultBranch = main
