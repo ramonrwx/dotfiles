@@ -16,7 +16,7 @@ export VIRTUALENV_NO_PERIODIC_UPDATE=1
 
 plugins=(
     cp colored-man-pages command-not-found
-    git jsontools ssh-agent z
+    git jsontools ssh-agent z virtualenvwrapper
 )
 
 zstyle :omz:plugins:ssh-agent quiet yes
@@ -69,7 +69,7 @@ alias lg="lazygit"
 alias ll="ls -l"
 alias lla="ls -la"
 alias tree="ls --tree --icon never"
-alias update-media="ssh sweetheart rclone rc vfs/refresh recursive=true"
+alias gpwlfs="GIT_LFS_SKIP_PUSH=1 gp && GIT_LFS_SKIP_PUSH=1 gp -4 upstream"
 
 # direnv
 eval "$(direnv hook zsh)"
