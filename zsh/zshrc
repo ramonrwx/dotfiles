@@ -69,7 +69,7 @@ alias lg="lazygit"
 alias ll="ls -l"
 alias lla="ls -la"
 alias tree="ls --tree --icon never"
-alias gpwlfs="GIT_LFS_SKIP_PUSH=1 gp && GIT_LFS_SKIP_PUSH=1 gp -4 upstream"
+alias gpwlfs="GIT_LFS_SKIP_PUSH=1 gp && GIT_LFS_SKIP_PUSH=1 gp -4"
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -79,4 +79,3 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 autoload -U bashcompinit
 bashcompinit
-PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "/data/data/com.termux/files/home/.config/tea/autocomplete.zsh"
