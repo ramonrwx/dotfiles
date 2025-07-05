@@ -1,0 +1,5 @@
+account "Fastmail" {
+	session-url "https://api.fastmail.com/jmap/session"
+	token-cmd "pass show email/fastmail | head -n1"
+	username "ramon@rwxcorp.net"
+}

@@ -41,7 +41,7 @@
     ~/.gnupg/gpg.conf: gpg/gpg.conf
 
     # isync/mbsync
-    ~/.mbsyncrc: isync/mbsyncrc
+    # ~/.mbsyncrc: isync/mbsyncrc
 
     # lazygit
     ~/.config/lazygit/config.yml: lazygit/config.yml
@@ -52,8 +52,11 @@
     # neovim
     ~/.config/nvim: nvim
 
+    # mjmap
+    ~/.config/mjmap/config.scfg: mjmap/config.scfg
+
     # msmtp
-    ~/.msmtprc: msmtp/msmtprc
+    # ~/.msmtprc: msmtp/msmtprc
 
     # ssh
     ~/.ssh/config: ssh/config

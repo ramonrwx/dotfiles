@@ -8,13 +8,14 @@ my dotfiles for termux app
 
 ```
 pkg install -y aerc atuin binutils build-essential curl \
-    direnv fd git gnupg golang \
-    gum hut iconv isync jq \
-    luarocks lazygit lsd neovim nodejs \
-    man msmtp openssh openssl openssl-tool \
-    python pass ripgrep ruby rust \
-    sqlite shfmt shellcheck stylua ugrep \
-    w3m zsh
+    direnv fd git git-lfs gnupg \
+    golang gum hut iconv isync \
+    jq just luarocks lazygit lsd \
+    neovim nodejs man msmtp openssh \
+    openssl openssl-tool python pass ripgrep \
+    ruby rust scdoc sqlite shfmt \
+    shellcheck stylua ugrep uv w3m \
+    wget zsh
 ```
 
 ### oh-my-zsh
@@ -30,13 +31,20 @@ python -m pip install --user \
     httpie \
     pre-commit \
     requests \
-    virtualenv
+    virtualenv \
+    virtualenvwrapper
 ```
 
 ### required go packages
 
+*mjmap*
+a sendmail-compatible JMAP client.
+
 ```
-go install github.com/ferdinandyb/maildir-rank-addr@latest
+git clone https://git.sr.ht/~rockorager/mjmap
+gmake -C mjmap PREFIX=~/.local
+cd mjmap
+mv mjmap ~/.go/bin
 ```
 
 ### lua packages
