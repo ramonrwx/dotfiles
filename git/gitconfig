@@ -62,7 +62,8 @@
   chainreplayto     = false
   confirm           = auto
   envelopesender    = auto
-  sendmailCmd       = /usr/bin/msmtp
+  sendmailCmd       = /usr/bin/mjmap --mailbox=Sent
+  suppressCc        = self
 [rerere]
   enabled = true
 [includeIf "gitdir:~/sources/"]
