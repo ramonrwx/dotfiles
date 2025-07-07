@@ -2,66 +2,55 @@ Create          Both
 Expunge         Both
 SyncState       *
 
-IMAPAccount     umbler
-Host            imap.umbler.com
-User            ramon@rwxcorp.net
-PassCmd         "pass show email/umbler | head -n1"
+IMAPAccount     fastmail
+Host            imap.fastmail.com
+User            sir@ramonrodrigu.es
+PassCmd         "pass show email/fastmail/imap | head -n1"
 TLSType         IMAPS
 Timeout         60
 Pipelinedepth   1
-CertificateFile ~/.cert/imap.umbler.com.pem
+CertificateFile ~/.cert/imap.fastmail.com.pem
 
-IMAPStore       umbler-remote
-Account         umbler
+IMAPStore       fastmail-remote
+Account         fastmail
 
-MaildirStore    umbler-local
+MaildirStore    fastmail-local
 Path            ~/mail/
 Inbox           ~/mail/Inbox
 SubFolders      Verbatim
 
-Channel         umbler-inbox
-Far             :umbler-remote:INBOX
-Near            :umbler-local:Inbox
+Channel         fastmail-inbox
+Far             :fastmail-remote:INBOX
+Near            :fastmail-local:Inbox
 
-Channel         umbler-deleted
-Far             :umbler-remote:"Deleted Items"
-Near            :umbler-local:Deleted
+Channel         fastmail-deleted
+Far             :fastmail-remote:Trash
+Near            :fastmail-local:Trash
 
-Channel         umbler-drafts
-Far             :umbler-remote:Drafts
-Near            :umbler-local:Drafts
+Channel         fastmail-drafts
+Far             :fastmail-remote:Drafts
+Near            :fastmail-local:Drafts
 
-Channel         umbler-spam
-Far             :umbler-remote:"Junk E-Mail"
-Near            :umbler-local:Spam
+Channel         fastmail-spam
+Far             :fastmail-remote:Spam
+Near            :fastmail-local:Spam
 
-Channel         umbler-sent
-Far             :umbler-remote:"Sent Items"
-Near            :umbler-local:Sent
+Channel         fastmail-sent
+Far             :fastmail-remote:Sent
+Near            :fastmail-local:Sent
 
-Channel         umbler-archive
-Far             :umbler-remote:Archive
-Near            :umbler-local:Archive
+Channel         fastmail-archive
+Far             :fastmail-remote:Archive
+Near            :fastmail-local:Archive
 
-Channel         umbler-contabo
-Far             :umbler-remote:Contabo
-Near            :umbler-local:Contabo
+Channel         fastmail-contabo
+Far             :fastmail-remote:Contabo
+Near            :fastmail-local:Contabo
 
-Channel         umbler-github
-Far             :umbler-remote:Github
-Near            :umbler-local:Github
+Channel         fastmail-github
+Far             :fastmail-remote:Github
+Near            :fastmail-local:Github
 
-Channel         umbler-sourcehut
-Far             :umbler-remote:SourceHut
-Near            :umbler-local:SourceHut
-
-Group           umbler
-Channel         umbler-inbox
-Channel         umbler-deleted
-Channel         umbler-drafts
-Channel         umbler-spam
-Channel         umbler-sent
-Channel         umbler-archive
-Channel         umbler-github
-Channel         umbler-sourcehut
-Channel         umbler-contabo
+Channel         fastmail-sourcehut
+Far             :fastmail-remote:SourceHut
+Near            :fastmail-local:SourceHut
