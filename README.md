@@ -56,7 +56,7 @@ luarocks install luacheck
 ### install dotfiles
 
 ```
-git clone --recurse-submodules https://git.sr.ht/~ramonrw/dotfiles ~/.dotfiles
+git clone --recurse-submodules https://git.sr.ht/~rmon/dotfiles ~/.dotfiles
 ```
 
 ```

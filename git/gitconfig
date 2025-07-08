@@ -48,7 +48,7 @@
   autoSetupRemote = true
   followTags = yes
 [commit]
-  gpgSign = true
+  gpgSign = false
   verbose = true
 [init]
   defaultBranch = main
