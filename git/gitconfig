@@ -62,7 +62,6 @@
   annotate          = yes
   assume8bitEncoing = UTF-8
   chainreplayto     = false
-  confirm           = auto
   envelopesender    = auto
   sendmailCmd       = /usr/bin/mjmap
   suppressCc        = self
