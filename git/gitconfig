@@ -61,6 +61,7 @@
 [sendemail]
   annotate          = yes
   assume8bitEncoing = UTF-8
+  confirm           = always
   chainreplayto     = false
   envelopesender    = auto
   sendmailCmd       = /usr/bin/mjmap
