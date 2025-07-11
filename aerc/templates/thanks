@@ -1,5 +1,9 @@
+X-Mailer: aerc {{version}}
 X-Sourcehut-Patchset-Update: APPLIED
 
-Thanks!
+{{(index .OriginalFrom 0).Name}}, {{dateFormat (.OriginalDate | toLocal) "Jan 02, 2006 at 15:04"}}:
+{{.OriginalText | quote}}
+
+Applied. Thanks!
 
 {{exec `branch="$(git branch --show-current)"; { git remote get-url --push origin; git reflog -2 "origin/$branch" --pretty=format:%h | xargs printf '%s\n' | tac; } | xargs printf "To %s\n   %s..%s  $branch -> $branch"` ""}}
